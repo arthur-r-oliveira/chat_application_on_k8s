@@ -9,7 +9,7 @@ if 'message_list' not in st.session_state:
 class Conversaion:
 
   client = openai.OpenAI(
-      base_url = 'http://localhost:11434/v1',
+      base_url = 'http://ollama-svc.ollama.svc.cluster.local/v1',
       api_key='ollama', # api_key is required, but unused for local models
   )
   

@@ -1,0 +1,14 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: chat-route
+  namespace: chat
+spec:
+  host: chat.apps.example.com
+  port:
+    targetPort: 8080
+  to:
+    kind: Service
+    name: chat-svc
+    weight: 100
+  wildcardPolicy: None
